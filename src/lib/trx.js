@@ -316,7 +316,7 @@ export default class Trx {
 
         address = this.tronWeb.address.toHex(address);
 
-        this.tronWeb.solidityNode.request('walletsolidity/getaccount', {
+        this.tronWeb.solidityNode.request('wallet/getaccount', {
             address
         }, 'post').then(account => {
             callback(null, account);
